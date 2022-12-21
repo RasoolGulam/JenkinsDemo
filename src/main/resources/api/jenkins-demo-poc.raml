@@ -1,0 +1,22 @@
+#%RAML 1.0
+title: jenkins-demo-poc
+
+/job:
+  get:
+    queryParameters:
+      name:
+        type: string
+        maxLength: 5
+        minLength: 5
+        required: true
+        example: "Gulam"
+    responses:
+      200:
+        body:
+          application/json:
+            example:
+              {
+                "name": "Gulam",
+                "Message": "SMart"
+              }
+          
